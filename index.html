@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valentine </title>
-
+<title>Valentine 💖</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;}
 body{
 background:linear-gradient(135deg,#ffb3da,#ffc9ec);
 overflow:hidden;
@@ -205,12 +203,12 @@ font-size:26px;
 cursor:pointer;
 }
 .win{
-  font-family:'Pacifico',
-  font-size:30px;
-  color:#ff2f8f;
-  font-weight:bold;
-  text-align:center;
-  animation:winPop 1s ease forwards;
+font-family:'Pacifico', cursive;
+font-size:30px;
+color:#ff2f8f;
+font-weight:bold;
+text-align:center;
+animation:winPop 1s ease forwards;
 }
 @keyframes winPop{
 0%{transform:scale(0);opacity:0;}
@@ -258,11 +256,11 @@ pointer-events:none;
 <body>
 
 <!-- FLOATING -->
-<div class="floating" style="top:10%;left:10%"></div>
-<div class="floating" style="top:70%;left:15%"></div>
-<div class="floating" style="top:30%;left:85%"></div>
-<div class="floating" style="top:80%;left:70%"></div>
-<div class="floating" style="top:50%;left:5%"></div>
+<div class="floating" style="top:10%;left:10%">💖</div>
+<div class="floating" style="top:70%;left:15%">💌</div>
+<div class="floating" style="top:30%;left:85%">💘</div>
+<div class="floating" style="top:80%;left:70%">🎀</div>
+<div class="floating" style="top:50%;left:5%">💞</div>
 
 <!-- SLIDE 1 -->
 <div class="section active" id="s1">
@@ -272,26 +270,26 @@ pointer-events:none;
 <!-- SLIDE 2 -->
 <div class="section" id="s2">
 <div class="card">
-<h1>Happy Valentine's Day! </h1>
+<h1>Happy Valentine's Day! 💕</h1>
 <p id="typing"></p>
 <div class="bar" onclick="increaseLove()">
 <div class="fill" id="loveFill"></div>
 </div>
-<p style="font-size:13px;color:#ff4fa3;">Tap the love bar </p>
-<button onclick="next(2)">Next </button>
+<p style="font-size:13px;color:#ff4fa3;">Tap the love bar 💖</p>
+<button onclick="next(2)">Next ➜</button>
 </div>
 </div>
 
 <!-- SLIDE 3 -->
 <div class="section" id="s3">
 <div class="card">
-<h1>Our Memories! ()</h1>
+<h1>Our Memories! (⁠☆⁠▽⁠☆⁠)</h1>
 <div class="gallery">
 <img src="foto1.jpg">
 <img src="foto2.jpg">
 </div>
 <div style="margin-top:35px;">
-<button onclick="next(3)">Next </button>
+<button onclick="next(3)">Next ➜</button>
 </div>
 </div>
 </div>
@@ -300,35 +298,35 @@ pointer-events:none;
 <div class="section" id="s4">
 <div class="player">
 <img src="cover.jpg" class="cover">
-<h3>Our Song ()</h3>
+<h3>Our Song (⁠≧⁠▽⁠≦⁠)</h3>
 <audio id="audio" src="song.mp3"></audio>
 <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
 <button onclick="togglePlay()">Play / Pause</button>
-<button onclick="next(4)">Next </button>
+<button onclick="next(4)">Next ➜</button>
 </div>
 </div>
 
 <!-- SLIDE 5 -->
 <div class="section" id="s5">
 <div class="card">
-<h1>Spin The Love! </h1>
+<h1>Spin The Love! 🎡</h1>
 <div class="wheel-wrap">
 <div id="wheel"></div>
 </div>
 <button onclick="spinWheel()">Spin</button>
 <div id="spinResult"></div>
-<button onclick="next(5)">Next </button>
+<button onclick="next(5)">Next ➜</button>
 </div>
 </div>
 
 <!-- SLIDE 6 -->
 <div class="section" id="s6">
 <div class="card">
-<h1>Catch 10 Hearts </h1>
+<h1>Catch 10 Hearts 💕</h1>
 <div id="gameArea"></div>
 <p>Score: <span id="score">0</span>/10</p>
 <div id="winMessage"></div>
-<button onclick="next(6)">Next </button>
+<button onclick="next(6)">Next ➜</button>
 </div>
 </div>
 
@@ -337,10 +335,10 @@ pointer-events:none;
 <div class="card">
 <h1>Will You Be My Valentine?</h1>
 <div class="choice">
-<button class="glass" id="yesBtn">YES! ()</button>
-<button class="glass" id="noBtn">NO.. ()</button>
+<button class="glass" id="yesBtn">YES! (⁠๑⁠♡⁠⌓⁠♡⁠๑⁠)</button>
+<button class="glass" id="noBtn">NO.. (⁠╥⁠﹏⁠╥⁠)</button>
 </div>
-<button onclick="next(7)">Finish </button>
+<button onclick="next(7)">Finish ➜</button>
 </div>
 </div>
 
@@ -353,7 +351,6 @@ pointer-events:none;
 </div>
 
 <script>
-
 /* SLIDE */
 function next(n){
 document.getElementById("s"+n).classList.remove("active");
@@ -400,44 +397,40 @@ document.getElementById("progressFill").style.width=
 });
 function togglePlay(){audio.paused?audio.play():audio.pause();}
 
-/* WHEEL � FIX PRESISI */
+/* WHEEL */
 let wheel=document.getElementById("wheel");
-
-let emojis=["","","","","",""];
+let emojis=["💞","💖","🌸","💍","💌","💘"];
 let messages=[
-"You�re my safe place ",
-"I adore you endlessly ",
-"You make my heart smile ",
-"Forever starts with you ",
-"You�re my favorite hello ",
-"I fall for you every day "
+"You’re my safe place 💞",
+"I adore you endlessly 💖",
+"You make my heart smile 🌸",
+"Forever starts with you 💍",
+"You’re my favorite hello 💌",
+"I fall for you every day 💘"
 ];
-
 const sliceAngle = 360 / emojis.length;
-const wheelSize = 260;            // HARUS sama dgn CSS
-const radius = wheelSize/2 - 65;  // 48�52 kalau mau fine tune
+const wheelSize = 260;
+const radius = wheelSize/2 - 65;
 
 emojis.forEach((emoji,i)=>{
   let slice=document.createElement("div");
   slice.className="slice";
   slice.innerText=emoji;
-
-  let angle = (i * sliceAngle) + (sliceAngle / 2) - 90;
-
+  let angle = i * sliceAngle;
   slice.style.transform = `
-  rotate(${angle}deg)
-  translate(${radius}px, -50%)
-`;
-
+    rotate(${angle}deg)
+    translate(${radius}px, -50%)
+  `;
   wheel.appendChild(slice);
 });
+
 function spinWheel(){
-let index=Math.floor(Math.random()*6);
-wheel.style.transform="rotate("+(index*60+720)+"deg)";
-setTimeout(()=>{
-document.getElementById("spinResult").innerHTML=
-"<div class='result-pop'>"+messages[index]+" </div>";
-},3000);
+  let index=Math.floor(Math.random()*6);
+  wheel.style.transform="rotate("+(index*60+720)+"deg)";
+  setTimeout(()=>{
+    document.getElementById("spinResult").innerHTML=
+      "<div class='result-pop'>"+messages[index]+" ✨</div>";
+  },3000);
 }
 
 /* GAME */
@@ -448,7 +441,7 @@ function spawn(){
 if(score>=max)return;
 let h=document.createElement("div");
 h.className="heartGame";
-h.innerHTML="";
+h.innerHTML="💖";
 h.style.left=Math.random()*260+"px";
 h.style.top="0px";
 area.appendChild(h);
@@ -462,11 +455,11 @@ document.getElementById("score").innerText=score;
 h.remove();clearInterval(fall);
 if(score>=max){
 clearInterval(interval);
-document.getElementById("winMessage").innerHTML="<div class='win'>YOU WON MY HEART </div>";
+document.getElementById("winMessage").innerHTML="<div class='win'>YOU WON MY HEART 💘</div>";
 for(let i=0;i<20;i++){
 let c=document.createElement("div");
 c.className="confetti";
-c.innerHTML="";
+c.innerHTML="💖";
 c.style.left=Math.random()*280+"px";
 area.appendChild(c);
 }
@@ -474,41 +467,35 @@ area.appendChild(c);
 };
 }
 
-/* YES NO FINAL STABLE */
+/* YES NO */
 let noBtn=document.getElementById("noBtn");
 let yesBtn=document.getElementById("yesBtn");
 let choiceBox=document.querySelector(".choice");
 choiceBox.style.position="relative";
 
-let noActivated=false;
-
 noBtn.addEventListener("click",function(e){
-e.stopPropagation();
-if(!noActivated){
-noBtn.style.position="absolute";
-noActivated=true;
-}
-let maxX=choiceBox.clientWidth-noBtn.offsetWidth;
-let maxY=choiceBox.clientHeight-noBtn.offsetHeight;
-noBtn.style.left=Math.random()*maxX+"px";
-noBtn.style.top=Math.random()*maxY+"px";
+  e.stopPropagation();
+  let maxX=choiceBox.clientWidth-noBtn.offsetWidth;
+  let maxY=choiceBox.clientHeight-noBtn.offsetHeight;
+  noBtn.style.position="absolute";
+  noBtn.style.left=Math.random()*maxX+"px";
+  noBtn.style.top=Math.random()*maxY+"px";
 });
 
 yesBtn.addEventListener("click",function(){
-let rect=yesBtn.getBoundingClientRect();
-let parentRect=choiceBox.getBoundingClientRect();
-for(let i=0;i<15;i++){
-let heart=document.createElement("div");
-heart.className="heart-burst";
-heart.innerHTML="";
-heart.style.left=(rect.left-parentRect.left+yesBtn.offsetWidth/2)+"px";
-heart.style.top=(rect.top-parentRect.top)+"px";
-choiceBox.appendChild(heart);
-setTimeout(()=>heart.remove(),1000);
-}
-setTimeout(()=>alert("YAY  I LOVE YOU SO MUCH!"),400);
+  let rect=yesBtn.getBoundingClientRect();
+  let parentRect=choiceBox.getBoundingClientRect();
+  for(let i=0;i<15;i++){
+    let heart=document.createElement("div");
+    heart.className="heart-burst";
+    heart.innerHTML="💖";
+    heart.style.left=(rect.left-parentRect.left+yesBtn.offsetWidth/2)+"px";
+    heart.style.top=(rect.top-parentRect.top)+"px";
+    choiceBox.appendChild(heart);
+    setTimeout(()=>heart.remove(),1000);
+  }
+  setTimeout(()=>alert("YAY 💖 I LOVE YOU SO MUCH!"),400);
 });
-
 </script>
 </body>
 </html>
