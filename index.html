@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family:"Comic Sans MS", cursive;
+  text-align:center;
+  background:linear-gradient(pink,#ffd6ec);
+  overflow-x:hidden;
+  transition:1s;
+}
+
+.container{
+  padding:30px;
+}
+
+h1{
+  color:#ff4da6;
+  font-size:40px;
+}
+
+.letter{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  width:70%;
+  margin:auto;
+  box-shadow:0 0 20px rgba(0,0,0,0.2);
+  display:none;
+  animation:fade 1s;
+}
+
+@keyframes fade{
+  from{opacity:0; transform:translateY(20px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
+button{
+  background:#ff66b2;
+  border:none;
+  padding:15px 25px;
+  border-radius:15px;
+  font-size:18px;
+  color:white;
+  cursor:pointer;
+  margin:10px;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+  background:#ff3385;
+}
+
+.gallery img{
+  width:200px;
+  border-radius:20px;
+  margin:10px;
+  box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+.heart{
+  position:fixed;
+  top:-10px;
+  font-size:20px;
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+  to{ transform:translateY(110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Hi Cutie 💕</h1>
+<p>I made something special for you...</p>
+
+<button onclick="showLetter()">Open Letter 💌</button>
+
+<div class="letter" id="letter">
+
+<h2>For You ❤️</h2>
+<p>
+From the first time I talked to you, something felt different.  
+You make my days brighter, my smile wider, and my heart warmer.  
+Thank you for existing in my life.  
+I hope this little website can make you smile the way you make me smile everyday. 💗
+</p>
+
+<div class="gallery">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+</div>
+
+<h2>Will you be my Valentine? 💞</h2>
+
+<button onclick="yesClicked()">YES 💖</button>
+<button id="noBtn" onmouseover="moveNo()">NO 😭</button>
+
+</div>
+
+<br>
+
+<audio autoplay loop controls>
+<source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+
+function showLetter(){
+  document.getElementById("letter").style.display="block";
+}
+
+function yesClicked(){
+  document.body.style.background="linear-gradient(45deg,#ff9ad5,#ffd6ec,#ffc0cb,#ffb6c1)";
+  startConfetti();
+}
+
+function moveNo(){
+  const btn=document.getElementById("noBtn");
+  btn.style.position="absolute";
+  btn.style.top=Math.random()*80+"vh";
+  btn.style.left=Math.random()*80+"vw";
+}
+
+function startConfetti(){
+  for(let i=0;i<120;i++){
+    const conf=document.createElement("div");
+    conf.innerHTML="🎉";
+    conf.style.position="fixed";
+    conf.style.left=Math.random()*100+"vw";
+    conf.style.top="-20px";
+    conf.style.fontSize=(Math.random()*20+10)+"px";
+    conf.style.animation=fall ${Math.random()*3+2}s linear forwards;
+    document.body.appendChild(conf);
+
+    setTimeout(()=>conf.remove(),5000);
+  }
+}
+
+function heartRain(){
+  const heart=document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML="💖";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=(Math.random()*3+2)+"s";
+  document.body.appendChild(heart);
+
+  setTimeout(()=>{heart.remove()},5000);
+}
+
+setInterval(heartRain,300);
+
+</script>
+
+</body>
+</html>
