@@ -109,6 +109,17 @@ transition:transform .3s ease;
 .gallery img.active{
 transform:scale(1.08);
 }
+/* MEDIA QUERY UNTUK RESPONSIVE GALLERY FOTO */
+@media (max-width: 480px) {  /* HP kecil */
+  .gallery img {
+    width: 160px;   /* otomatis lebih kecil di HP */
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) { /* Tablet */
+  .gallery img {
+    width: 200px;   /* ukuran menengah di tablet */
+  }
+}
 
 /* PLAYER */
 .player{
